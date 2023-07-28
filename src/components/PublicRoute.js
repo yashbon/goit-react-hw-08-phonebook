@@ -7,7 +7,13 @@ import { Navigate } from 'react-router-dom';
  */
 
 export const PublicRoute = ({ component: Component, redirectTo = '/' }) => {
+<<<<<<< Updated upstream
   const { isLoggedIn } = useAuth();
 
   return isLoggedIn ? <Navigate to={redirectTo} /> : Component;
+=======
+    const { isLoggedIn } = useAuth();
+
+    return isLoggedIn ? <Navigate to={redirectTo} /> : Component;
+>>>>>>> Stashed changes
 };

@@ -7,8 +7,15 @@ import { useAuth } from 'hooks';
  */
 
 export const PrivateRoute = ({ component: Component, redirectTo = '/' }) => {
+<<<<<<< Updated upstream
   const { isLoggedIn, isRefreshing } = useAuth();
   const shouldRedirect = !isLoggedIn && !isRefreshing;
 
   return shouldRedirect ? <Navigate to={redirectTo} /> : Component;
+=======
+    const { isLoggedIn, isRefreshing } = useAuth();
+    const shouldRedirect = !isLoggedIn && !isRefreshing;
+
+    return shouldRedirect ? <Navigate to={redirectTo} /> : Component;
+>>>>>>> Stashed changes
 };

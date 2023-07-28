@@ -3,6 +3,7 @@ const { Suspense } = require('react');
 const { Outlet } = require('react-router-dom');
 
 const Layout = () => {
+<<<<<<< Updated upstream
   return (
     <>
       <AppBar />
@@ -11,6 +12,16 @@ const Layout = () => {
       </Suspense>
     </>
   );
+=======
+    return (
+        <>
+            <AppBar />
+            <Suspense fallback={null}>
+                <Outlet />
+            </Suspense>
+        </>
+    );
+>>>>>>> Stashed changes
 };
 
 export default Layout;
