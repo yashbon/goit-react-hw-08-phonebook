@@ -1,23 +1,10 @@
-import { useDispatch } from 'react-redux';
-
 export const UserMenu = () => {
-<<<<<<< Updated upstream
-  const dispatch = useDispatch();
-  // const { user } = useAuth()
-  return (
-    <div>
-      <p>Hi, </p>
-      <button>Logout</button>
-    </div>
-  );
-=======
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     // const { user } = useAuth()
     return (
-        <div>
-            <p>Hi, </p>
-            <button>Logout</button>
+        <div style={{ display: 'flex', gap: 10 }}>
+            <p style={{ margin: 0 }}>Hello, mango@mail.com</p>
+            <button style={{ height: 'fit-contant' }}>Logout</button>
         </div>
     );
->>>>>>> Stashed changes
 };

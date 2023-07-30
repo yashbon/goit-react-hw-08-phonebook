@@ -1,19 +1,15 @@
+import { useAuth } from 'components/hooks/useAuth';
 import { NavLink } from 'react-router-dom';
 
 export const Navigation = () => {
-<<<<<<< Updated upstream
-  return (
-    <nav>
-      <NavLink>Home</NavLink>
-      <NavLink>Contacts</NavLink>
-    </nav>
-  );
-=======
+    // const { isLoggedIn } = useAuth();
+    // const { isLoggedIn } = true; // T M P
+
     return (
-        <nav>
-            <NavLink>Home</NavLink>
-            <NavLink>Contacts</NavLink>
+        <nav style={{ display: 'flex', gap: 10 }}>
+            <NavLink to="/">Home</NavLink>
+            {/* {isLoggedIn && <NavLink to="/contacts">Contacts</NavLink>} */}
+            {false && <NavLink to="/contacts">Contacts</NavLink>}
         </nav>
     );
->>>>>>> Stashed changes
 };

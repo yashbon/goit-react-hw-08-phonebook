@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/contactsSlice';
+import { addContact } from 'redux/operations';
 import css from './ContactForm.module.css';
 
 const ContactForm = () => {
@@ -8,7 +8,7 @@ const ContactForm = () => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        const { name, number } = event.target.elements;
+        const { name, phone } = event.target.elements;
 
         if (
             contacts.list.find(
@@ -20,7 +20,7 @@ const ContactForm = () => {
         } else {
             const newContact = {
                 name: name.value,
-                number: number.value,
+                phone: phone.value,
             };
             dispatch(addContact(newContact));
         }
@@ -42,15 +42,13 @@ const ContactForm = () => {
                 />
             </label>
             <br />
-            <label
-                className={css.label} // htmlFor=""
-            >
-                Number
+            <label className={css.label}>
+                Phone
                 <br />
                 <input
                     className={css.input}
                     type="tel"
-                    name="number"
+                    name="phone"
                     pattern="^[0-9]+$"
                     title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                     required

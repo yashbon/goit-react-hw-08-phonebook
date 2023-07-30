@@ -1,19 +1,12 @@
-const { RegisterForm } = require('components/RegisterForm/RegisterForm');
+import { RegisterForm } from 'components/RegisterForm/RegisterForm';
 
-function Register(params) {
-<<<<<<< Updated upstream
-  return (
-    <>
-      <RegisterForm />
-    </>
-  );
-=======
+function Register() {
+    console.log('Register Page');
     return (
         <>
             <RegisterForm />
         </>
     );
->>>>>>> Stashed changes
 }
 
 export default Register;

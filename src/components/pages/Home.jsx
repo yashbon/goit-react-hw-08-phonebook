@@ -1,9 +1,6 @@
 const Home = () => {
-<<<<<<< Updated upstream
-  return <h1>welcome! phonebook app</h1>;
-=======
-    return <h1>welcome! phonebook app</h1>;
->>>>>>> Stashed changes
+    console.log('Home Page');
+    return <h2>Welcome to phonebook app!</h2>;
 };
 
 export default Home;
