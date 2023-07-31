@@ -1,4 +1,4 @@
-const { LoginForm } = require('components/LoginForm/LoginForm');
+import { LoginForm } from 'components/LoginForm/LoginForm';
 
 function Login(params) {
     console.log('Login Page');
