@@ -11,6 +11,7 @@ import { lazy, useEffect } from 'react';
 import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivatRoute';
 import { useAuth } from './hooks/useAuth';
+import { refreshUser } from 'redux/auth/authOperations';
 
 const Home = lazy(() => import('../components/pages/Home'));
 const Register = lazy(() => import('../components/pages/Register'));
@@ -20,16 +21,15 @@ const Contacts = lazy(() => import('../components/pages/Contacts'));
 export const App = () => {
     // const { isLoading, error } = useSelector(state => state.contacts);
     const dispatch = useDispatch();
-    // const { isRefreshing } = useAuth();
+    const { isRefreshing } = useAuth();
 
     useEffect(() => {
-        //   dispatch(refreshUser());
+        dispatch(refreshUser());
     }, [dispatch]);
 
-    return (
-        // isRefreshing ? (
-        //     <b>Refreshing user...</b>
-        // ) : (
+    return isRefreshing ? (
+        <b>Refreshing user...</b>
+    ) : (
         <div
             style={{
                 // height: '100vh',
@@ -74,20 +74,6 @@ export const App = () => {
                     />
                 </Route>
             </Routes>
-
-            {/* O L D  ! ! !
-            <h1>Phonebook</h1>
-            <ContactForm />
-            <h2>Contacts</h2>
-            {isLoading && !error && (
-                <>
-                    <br />
-                    <b>Request in progress...</b>
-                    <br />
-                </>
-            )}
-            <Filter />
-            <ContactList /> */}
         </div>
     );
 };
