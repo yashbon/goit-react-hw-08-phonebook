@@ -1,11 +1,11 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/authOperations';
 
 export const LoginForm = () => {
     const dispatch = useDispatch();
-    const [email, setEmail] = useState();
-    const [password, setPasswoed] = useState();
+    // const [email, setEmail] = useState();
+    // const [password, setPasswoed] = useState();
 
     const handleSubmit = event => {
         event.preventDefault();
