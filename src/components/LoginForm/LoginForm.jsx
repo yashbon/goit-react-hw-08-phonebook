@@ -9,11 +9,8 @@ export const LoginForm = () => {
 
     const handleSubmit = event => {
         event.preventDefault();
+
         const form = event.currentTarget;
-
-        // console.log(form.elements.email.value);
-        // console.log(form.elements.password.value);
-
         dispatch(
             logIn({
                 email: form.elements.email.value,
