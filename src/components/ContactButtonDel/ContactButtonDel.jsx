@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { deleteContact, fetchContacts } from 'redux/operations';
+import { deleteContact, fetchContacts } from 'redux/contacts/operations';
 import css from './ContactButtonDel.module.css';
 import { useEffect } from 'react';
 

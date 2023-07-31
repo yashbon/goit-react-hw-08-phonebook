@@ -1,6 +1,31 @@
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { logIn } from 'redux/auth/authOperations';
+
 export const LoginForm = () => {
+    const dispatch = useDispatch();
+    const [email, setEmail] = useState();
+    const [password, setPasswoed] = useState();
+
+    const handleSubmit = event => {
+        event.preventDefault();
+        const form = event.currentTarget;
+
+        // console.log(form.elements.email.value);
+        // console.log(form.elements.password.value);
+
+        dispatch(
+            logIn({
+                email: form.elements.email.value,
+                password: form.elements.password.value,
+            })
+        );
+        //   setEmail('');
+        //   setPassword('');
+        form.reset();
+    };
     return (
-        <form style={{ display: 'grid' }}>
+        <form style={{ display: 'grid' }} onSubmit={handleSubmit}>
             <label htmlFor="">
                 Email
                 <input type="email" name="email" />

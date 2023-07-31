@@ -1,4 +1,4 @@
-// import { useAuth } from 'hooks/';
+import { useAuth } from './hooks/useAuth';
 import { Navigate } from 'react-router-dom';
 
 /**
@@ -7,8 +7,7 @@ import { Navigate } from 'react-router-dom';
  */
 
 export const PublicRoute = ({ component: Component, redirectTo = '/' }) => {
-    // const { isLoggedIn } = useAuth();
+    const { isLoggedIn } = useAuth();
 
-    // return isLoggedIn ? <Navigate to={redirectTo} /> : Component;
-    return false ? <Navigate to={redirectTo} /> : Component;
+    return isLoggedIn ? <Navigate to={redirectTo} /> : Component;
 };
