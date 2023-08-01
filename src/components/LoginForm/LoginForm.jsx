@@ -2,7 +2,7 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/authOperations';
 
-export const LoginForm = () => {
+const LoginForm = () => {
     const dispatch = useDispatch();
     // const [email, setEmail] = useState();
     // const [password, setPasswoed] = useState();
@@ -35,3 +35,4 @@ export const LoginForm = () => {
         </form>
     );
 };
+export default LoginForm;

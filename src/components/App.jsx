@@ -17,9 +17,9 @@ import { useAuth } from './hooks/useAuth';
 import { refreshUser } from 'redux/auth/authOperations';
 
 const Home = lazy(() => import('../components/pages/Home'));
+const Contacts = lazy(() => import('../components/pages/Contacts'));
 const Register = lazy(() => import('../components/pages/Register'));
 const Login = lazy(() => import('../components/pages/Login'));
-const Contacts = lazy(() => import('../components/pages/Contacts'));
 
 export const App = () => {
     // const { isLoading, error } = useSelector(state => state.contacts);
