@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import { useAuth } from 'components/hooks/useAuth';
 import { useDispatch } from 'react-redux';
 import { logOut } from 'redux/auth/authOperations';
@@ -13,13 +14,18 @@ export const UserMenu = () => {
         dispatch(logOut());
     };
     return (
-        <div style={{ display: 'flex', gap: 10 }}>
+        <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
             <p style={{ margin: 0 }}>
                 Hello, <b>{user.name}</b>!
             </p>
-            <button style={{ height: 'fit-contant' }} onClick={handleLogOut}>
+            <Button
+                variant="outlined"
+                size="small"
+                style={{ height: 'fit-contant' }}
+                onClick={handleLogOut}
+            >
                 Logout
-            </button>
+            </Button>
         </div>
     );
 };

@@ -5,13 +5,22 @@ import { useAuth } from 'components/hooks/useAuth';
 
 const AppBar = () => {
     const { isLoggedIn } = useAuth();
-    console.log(isLoggedIn);
-    console.log(useAuth());
+    // console.log(isLoggedIn);
+    // console.log(useAuth());
     return (
-        <header style={{ display: 'flex', gap: 10 }}>
+        <header
+            style={{
+                width: '100%',
+                display: 'flex',
+                padding: 10,
+                gap: 10,
+                // backgroundColor: 'white'
+                justifyContent: 'space-around',
+                alignItems: 'center',
+            }}
+        >
             <Navigation />
             {isLoggedIn ? <UserMenu /> : <AuthMenu />}
-            {/* {false ? <UserMenu /> : <AuthMenu />} */}
         </header>
     );
 };
