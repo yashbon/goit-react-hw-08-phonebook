@@ -31,7 +31,6 @@ const LoginForm = () => {
             }}
             noValidate
             autoComplete="off"
-            // onSubmit={handleSubmit}
         >
             <form
                 style={{
@@ -46,7 +45,6 @@ const LoginForm = () => {
                     id="outlined-basic"
                     label="Email"
                     variant="outlined"
-                    // defaultValue="Small"
                     size="small"
                     type="email"
                     name="email"
@@ -57,30 +55,16 @@ const LoginForm = () => {
                     required
                     id="outlined-required"
                     label="Password"
-                    // defaultValue="Hello World"
                     type="password"
                     name="password"
                     size="small"
                     style={{ backgroundColor: 'white' }}
                 />
-                {/* <button type="submit">Log In</button> */}
                 <Button variant="contained" type="submit">
                     Log In
                 </Button>
             </form>
         </Box>
-
-        // <form style={{ display: 'grid' }} onSubmit={handleSubmit}>
-        //     <label htmlFor="">
-        //         Email
-        //         <input type="email" name="email" />
-        //     </label>
-        //     <label htmlFor="">
-        //         Password
-        //         <input type="password" name="password" />
-        //     </label>
-        //     <button type="submit">Log In</button>
-        // </form>
     );
 };
 export default LoginForm;

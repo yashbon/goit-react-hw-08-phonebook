@@ -1,4 +1,3 @@
-// import { Link } from '@mui/material';
 import { useAuth } from 'components/hooks/useAuth';
 import { NavLink } from 'react-router-dom';
 
@@ -6,7 +5,6 @@ import css from './Navigation.module.css';
 
 export const Navigation = () => {
     const { isLoggedIn } = useAuth();
-    console.log(isLoggedIn);
 
     return (
         <nav style={{ display: 'flex', gap: 10 }}>
@@ -18,7 +16,6 @@ export const Navigation = () => {
                     Contacts
                 </NavLink>
             )}
-            {/* {false && <NavLink to="/contacts">Contacts</NavLink>} */}
         </nav>
     );
 };

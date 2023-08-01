@@ -3,7 +3,6 @@ import ContactForm from 'components/ContactForm/ContactForm';
 import Filter from 'components/Filter/Filter';
 
 const Contacts = () => {
-    console.log('Contacts Page');
     return (
         <>
             <h2>Add a new contact</h2>

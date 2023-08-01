@@ -2,14 +2,8 @@ import {
     useDispatch,
     // useSelector
 } from 'react-redux';
-// import ContactList from './ConactList/ContactList';
-// import ContactForm from './ContactForm/ContactForm';
-// import Filter from './Filter/Filter';
 import { Route, Routes } from 'react-router-dom';
-// import Home from './pages/Home';
 import Layout from './Layuot/Leyout';
-// import Register from './pages/Register';
-// import { PublicRoute } from './PublicRoute';
 import { lazy, useEffect } from 'react';
 import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivatRoute';

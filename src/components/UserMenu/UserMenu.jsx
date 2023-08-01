@@ -10,7 +10,6 @@ export const UserMenu = () => {
     const { user } = useAuth();
 
     const handleLogOut = () => {
-        console.log('click logout');
         dispatch(logOut());
     };
     return (

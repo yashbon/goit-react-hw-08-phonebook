@@ -18,7 +18,7 @@ export const RegisterForm = () => {
                 password: form.elements.password.value,
             })
         );
-        // form.reset();
+        form.reset();
     };
 
     return (
@@ -29,14 +29,12 @@ export const RegisterForm = () => {
             }}
             noValidate
             autoComplete="off"
-            // onSubmit={handleSubmit}
         >
             <form
                 style={{
                     display: 'flex',
                     flexDirection: 'column',
                     gap: 20,
-                    // backgroundColor: 'white',
                 }}
                 onSubmit={handleSubmit}
             >
@@ -44,33 +42,26 @@ export const RegisterForm = () => {
                     id="outlined-basic"
                     label="Name"
                     variant="outlined"
-                    // defaultValue="Small"
                     name="name"
                     size="small"
                     type="name"
-                    // required
-                    // style={{ backgroundColor: 'white' }}
                 />
                 <TextField
                     id="outlined-basic"
                     label="Email"
                     variant="outlined"
-                    // defaultValue="Small"
                     size="small"
                     type="email"
                     name="email"
                     required
-                    // style={{ backgroundColor: 'white' }}
                 />
                 <TextField
                     required
                     id="outlined-required"
                     label="Password"
-                    // defaultValue="Hello World"
                     type="password"
                     name="password"
                     size="small"
-                    // style={{ backgroundColor: 'white' }}
                 />
                 <Button variant="contained" type="submit">
                     Reggister
@@ -79,48 +70,3 @@ export const RegisterForm = () => {
         </Box>
     );
 };
-// {/* <Box
-//     content="form"
-//     sx={{
-//         '& > :not(style)': { m: 1, width: '25ch' },
-//     }}
-//     noValidate
-//     autoComplete="off"
-//     // onSubmit={handleSubmit}
-// >
-//     <form
-//         style={{
-//             display: 'flex',
-//             flexDirection: 'column',
-//             gap: 20,
-//             backgroundColor: 'white',
-//         }}
-//         onSubmit={handleSubmit}
-//     >
-//         <TextField
-//             id="outlined-basic"
-//             label="Email"
-//             variant="outlined"
-//             // defaultValue="Small"
-//             size="small"
-//             type="email"
-//             name="email"
-//             required
-//             style={{ backgroundColor: 'white' }}
-//         />
-//         <TextField
-//             required
-//             id="outlined-required"
-//             label="Password"
-//             // defaultValue="Hello World"
-//             type="password"
-//             name="password"
-//             size="small"
-//             style={{ backgroundColor: 'white' }}
-//         />
-//         {/* <button type="submit">Log In</button> */}
-//         // <Button variant="contained" type="submit">
-//         //     Log In
-//         // </Button>
-// //     </form>
-// // </Box>; */}
