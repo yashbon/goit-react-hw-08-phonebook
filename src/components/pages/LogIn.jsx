@@ -1,6 +1,6 @@
 import { LoginForm } from 'components/LoginForm/LoginForm';
 
-function Login(params) {
+function Login() {
     console.log('Login Page');
     return (
         <>
