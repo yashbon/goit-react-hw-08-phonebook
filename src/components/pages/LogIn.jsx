@@ -1,4 +1,4 @@
-import { LoginForm } from '../LoginForm/LoginForm';
+import { LoginForm } from 'components/LoginForm/LoginForm';
 
 function Login() {
     console.log('Login Page');
