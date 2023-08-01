@@ -16,9 +16,9 @@ import { PrivateRoute } from './PrivatRoute';
 import { useAuth } from './hooks/useAuth';
 import { refreshUser } from 'redux/auth/authOperations';
 
-const Home = lazy(() => import('../components/pages/Home'));
-const Contacts = lazy(() => import('../components/pages/Contacts'));
-const Register = lazy(() => import('../components/pages/Register'));
+const Home = lazy(() => import('./pages/Home'));
+const Contacts = lazy(() => import('./pages/Contacts'));
+const Register = lazy(() => import('./pages/Register'));
 const Login = lazy(() => import('./pages/Login'));
 
 export const App = () => {
